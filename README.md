@@ -10,13 +10,16 @@ a Claude Design handoff; rebuilt here as a real, deployable site. Content is sou
 ## Structure
 
 ```
-index.html    one page — topbar · hero · live projects · selected work · about · CV · footer
+index.html    one page — topbar · hero · selected work · live projects · about · CV · footer
 styles.css    kit styles (ported from the design's ui_kits/portfolio) + live-projects band + responsive
 tokens.css    design tokens (colors, type, spacing, shadow, motion) + Google Fonts @import
 app.js        topbar dissolve · scrollspy · theme toggle · work-detail modals
 assets/
-  photos/     hero-dolomites.jpeg, rope-team.jpg
+  photos/     hero-dolomites.jpeg + .webp (CSS image-set), rope-team.jpg
+  cv/         Isaac-Kaczor-CV.pdf (+ .src.html, README) — Download CV button target
   logo/       monogram.svg (favicon)
+robots.txt    + sitemap.xml — SEO
+deploy.sh     vercel --prod + canonical re-alias (see Deploy)
 ```
 
 ## View locally
@@ -46,9 +49,12 @@ any `file://` quirks.)
 - Work case studies are pre-rendered `.sheet-scrim[data-sheet="…"]` blocks toggled by the
   matching `.work-card[data-open="…"]`.
 
-## Deploy (when ready)
+## Deploy
 
-Any static host. For Vercel: `vercel` from this directory (framework preset **Other**, no
-build command, output dir `.`). For GitHub Pages: push and enable Pages on the root.
+Run `./deploy.sh` from this directory — it deploys to Vercel prod **and** re-aliases the
+canonical domain `isaac-kaczor.vercel.app` to the new build. Do **not** use a bare
+`vercel --prod`: the canonical domain is a manual `.vercel.app` alias and won't auto-follow
+production, so `--prod` alone leaves the live site on the old build. (See `CLAUDE.md` for the
+root-cause fix.)
 ```
 ```

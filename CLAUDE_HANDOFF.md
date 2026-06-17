@@ -14,8 +14,8 @@ https://isaac-kaczor.vercel.app.**
 
 ## Current State
 Shipped and live. Everything works:
-- Sections: topbar · hero · **Live projects** band · selected work (case-study
-  modals) · about · CV · footer.
+- Sections: topbar · hero · selected work (case-study modals) · **Live projects**
+  band · about · CV · footer. (Professional work leads; sports forecasting follows.)
 - Behaviors (vanilla JS): dissolving topbar, scrollspy, theme toggle (system
   default + `localStorage` override), work-detail modals (open on click, close on
   Esc/backdrop, focus trap), reduced-motion guard, footer year.
@@ -45,9 +45,13 @@ functionally test, headless Chrome at
   motion) + Google Fonts `@import`. Kept whole on purpose (mirrors the token set
   in wc26-dashboard and municipal-analytics-app); do not trim.
 - `app.js` — vanilla behaviors (see Current State). No framework.
-- `assets/photos/` — `hero-dolomites.jpeg` (hero bg), `rope-team.jpg` (about).
-  Downscaled from ~12 MB → ~1.2 MB via `sips`.
+- `assets/photos/` — `hero-dolomites.jpeg` + `hero-dolomites.webp` (hero bg, served
+  via CSS `image-set()`; WebP primary ~122K, JPEG fallback ~263K), `rope-team.jpg` (about).
+- `assets/cv/` — `Isaac-Kaczor-CV.pdf` (the Download-CV button target),
+  `Isaac-Kaczor-CV.src.html` (layout source), `README.md` (regen steps).
 - `assets/logo/monogram.svg` — favicon (self-contained; renders "ik" + moss tick).
+- `robots.txt` + `sitemap.xml` — SEO; robots references the sitemap.
+- `deploy.sh` — deploy + canonical re-alias (see Deploy).
 - `README.md` — view/deploy/editing notes.
 - `.claude/cleanup_report.md` — gitignored, not in the repo.
 
@@ -68,7 +72,13 @@ inline in `index.html` (no CMS). Source of truth for the *copy* is
 ## Deploy
 - Vercel project **`portfolio`** (team `kaczor594s-projects`). Static, framework
   preset Other, no build, output dir `.`.
-- Redeploy: `vercel --prod` (or `vercel deploy --prod --yes`) from the repo root.
+- **Redeploy: `./deploy.sh` from the repo root.** It runs `vercel --prod` then
+  re-aliases `isaac-kaczor.vercel.app` to the new deployment. ⚠️ Do NOT use a bare
+  `vercel --prod`: `isaac-kaczor.vercel.app` is a manual `.vercel.app` alias, not the
+  project's auto-following production domain, so `--prod` alone leaves the live site
+  on the OLD build. (Root-cause fix for later: attach the domain as a Production
+  domain in the Vercel dashboard, then plain `--prod` auto-aliases it and `deploy.sh`
+  can retire.)
 - **Git auto-deploy is NOT connected** — the Vercel GitHub app lacks access to
   `portfolio-site`. To enable push-to-deploy: Vercel dashboard → project →
   Settings → Git → Connect (grant the app access to the repo). Until then,
@@ -99,7 +109,7 @@ inline in `index.html` (no CMS). Source of truth for the *copy* is
   canonical/OG to the production domain.
 
 ## Known Issues
-- Git push does not auto-deploy (see Deploy) — redeploy manually with `vercel --prod`.
+- Git push does not auto-deploy (see Deploy) — redeploy with `./deploy.sh`.
 - At <320px viewport the theme toggle clips ~16px (no page scroll; 320px is
   effectively extinct). Fine ≥360px.
 - OG/canonical are hardcoded to `isaac-kaczor.vercel.app`; if a custom domain
@@ -111,4 +121,5 @@ inline in `index.html` (no CMS). Source of truth for the *copy* is
   and update its stats; redeploy.
 - [ ] (Optional) Connect Vercel ↔ GitHub for push-to-deploy.
 - [ ] (Optional) Add a custom domain in Vercel and update head tags.
-- [ ] (Optional) Add a "Download CV (PDF)" link if a canonical CV PDF is produced.
+- [x] Add a "Download CV (PDF)" link — done (button in the CV section + a generated
+  one-page PDF at `assets/cv/`; swap in a pipeline résumé export anytime).
