@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Isaac Kaczor — Statistics, econometrics & the systems around them</title>
+<meta name="description" content="Isaac Kaczor — a statistics and econometrics practitioner in Munich. Five years building forecasting, bidding, and measurement systems that teams trust and act on. Live probabilistic-forecasting projects, professional case studies, and CV."/>
+<meta name="author" content="Isaac Kaczor"/>
+<link rel="canonical" href="https://isaackaczor.com/"/>
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Isaac Kaczor — Statistics, econometrics & the systems around them"/>
+<meta property="og:description" content="Five years turning messy operational data into simple, live tools teams trust. Forecasting, bidding, and measurement — Munich."/>
+<meta property="og:image" content="assets/photos/hero-dolomites.jpeg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="icon" type="image/svg+xml" href="assets/logo/monogram.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+
+  <!-- ============ TOPBAR ============ -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#top" data-nav="top">
+        Isaac Kaczor<span class="dot">.</span>
+        <span class="initials">IK — MUC</span>
+      </a>
+      <nav aria-label="Primary">
+        <a class="nav-link" href="#live" data-nav="live">Live</a>
+        <a class="nav-link" href="#work" data-nav="work">Work</a>
+        <a class="nav-link" href="#about" data-nav="about">About</a>
+        <a class="nav-link" href="#cv" data-nav="cv">CV</a>
+        <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle light / dark" aria-label="Toggle light or dark theme">☀</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-meta">
+        <span class="rule"></span>
+        <span>Isaac Kaczor · Munich, DE</span>
+        <span>Open to new roles</span>
+      </div>
+      <h1 class="hero-title">
+        Quiet statistics for<br class="hero-br"/>
+        noisy <em>businesses.</em>
+      </h1>
+      <p class="hero-lede">
+        Five years turning messy operational data into simple, live tools that teams trust
+        and act on — forecasting, bidding, and measurement. I build models that explain
+        themselves to the person whose budget they're steering, and I'm now looking for a
+        data, analytics, or entry-level actuarial role in Munich.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#live" data-nav="live">See live projects</a>
+        <a class="btn btn-ghost" href="#contact" data-nav="contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE PROJECTS ============ -->
+  <section id="live" class="live">
+    <div class="section-head">
+      <div class="eyebrow">Live projects</div>
+      <h2>Models you can <span class="serif-italic">open</span> and poke at.</h2>
+      <p class="section-lede">Two probabilistic forecasting systems, built and run end to end — each one logged against live market consensus to keep it honest.</p>
+    </div>
+    <div class="live-grid">
+
+      <a class="live-card" href="https://wc26-dashboard-nu.vercel.app" target="_blank" rel="noopener noreferrer">
+        <div class="live-top">
+          <span class="live-status is-live"><span class="dot"></span>Live dashboard</span>
+          <span class="live-kicker">Probabilistic forecasting · 2026</span>
+        </div>
+        <h3 class="live-title">World Cup 2026 prediction model.</h3>
+        <p class="live-summary">
+          Player-level strength ratings roll up to team ratings, then a 10,000-run Monte Carlo
+          simulates every match and the full bracket, with Bayesian updating as results land.
+          An automated matchday agent ingests starting lineups from the ESPN API at kickoff,
+          produces a lineup-conditioned forecast, and logs predicted vs. actual outcomes
+          against live market consensus — pipeline, model, scheduled agent, and dashboard all
+          self-operated.
+        </p>
+        <div class="live-stats">
+          <div class="live-stat"><span class="live-stat-k">Backtest matches</span><span class="live-stat-v">1,400+</span></div>
+          <div class="live-stat"><span class="live-stat-k">Sims / run</span><span class="live-stat-v">10,000</span></div>
+          <div class="live-stat"><span class="live-stat-k">Refreshes</span><span class="live-stat-v">each matchday</span></div>
+        </div>
+        <div class="live-foot">
+          <div class="tags"><span class="tag">R</span><span class="tag">Python</span><span class="tag">SQLite</span></div>
+          <span class="live-go">Open dashboard →</span>
+        </div>
+      </a>
+
+      <div class="live-card soon">
+        <div class="live-top">
+          <span class="live-status"><span class="dot"></span>Coming soon</span>
+          <span class="live-kicker">Probabilistic forecasting · NCAA</span>
+        </div>
+        <h3 class="live-title">March Madness bracket model.</h3>
+        <p class="live-summary">
+          An XGBoost win-probability model over 16,691 NCAA Division I games: leakage-free
+          feature engineering, walk-forward evaluation, 10-bin calibration, and SHAP
+          attribution, plus a three-layer player-availability system and a 100k-run Monte
+          Carlo bracket simulator. Benchmarked on out-of-sample calibration and against the
+          market. A public dashboard is on the way.
+        </p>
+        <div class="live-stats">
+          <div class="live-stat"><span class="live-stat-k">Games modeled</span><span class="live-stat-v">16,691</span></div>
+          <div class="live-stat"><span class="live-stat-k">Player-games</span><span class="live-stat-v">525k</span></div>
+          <div class="live-stat"><span class="live-stat-k">Bracket sims</span><span class="live-stat-v">100k</span></div>
+        </div>
+        <div class="live-foot">
+          <div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SHAP</span><span class="tag">SQLite</span></div>
+          <span class="live-soon-tag">Dashboard coming soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section id="work" class="section">
+    <div class="section-head">
+      <div class="eyebrow">Selected work</div>
+      <h2>Forecasting, measurement, <span class="serif-italic">systems.</span></h2>
+      <p class="section-lede">Four projects that typify the practice. Each one had to explain itself — not just predict.</p>
+    </div>
+    <div class="work-grid">
+
+      <button class="work-card" data-open="holidu-bid">
+        <div class="work-number">№ 01</div>
+        <div class="eyebrow">2021 — 2025 · Holidu · Munich</div>
+        <h3 class="work-title">Bidding model steering up to 80% of company revenue.</h3>
+        <p class="work-summary">Owned the Google Ads bidding system and rebuilt its logic around marginal-profit analysis. Doubled model-driven profit from €2.4M to over €5M, with €25M+ in revenue routed through it.</p>
+        <div class="work-stats">
+          <div class="work-stat"><span class="work-stat-k">Model profit</span><span class="work-stat-v">€2.4M → €5M+</span></div>
+          <div class="work-stat"><span class="work-stat-k">Revenue via</span><span class="work-stat-v">€25M+</span></div>
+          <div class="work-stat"><span class="work-stat-k">Markets</span><span class="work-stat-v">24</span></div>
+        </div>
+        <div class="work-footer">
+          <div class="tags"><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Airflow</span><span class="tag">AWS</span></div>
+          <div class="work-actions"><span class="work-open">Read →</span></div>
+        </div>
+      </button>
+
+      <button class="work-card" data-open="municipal">
+        <div class="work-number">№ 02</div>
+        <div class="eyebrow">2025 — · Municipal Analytics · Remote</div>
+        <h3 class="work-title">Standardizing messy utility data, then optimizing the rates.</h3>
+        <p class="work-summary">A rate-calculation engine for municipal water and sewer utilities. An AI layer standardizes each client's billing data to the format the engine needs — adapting to their structure, proofing for gaps, and flagging quality issues — then the engine optimizes rates against the community's finances and returns a clean, consultant-ready study.</p>
+        <div class="work-stats">
+          <div class="work-stat"><span class="work-stat-k">Data prep</span><span class="work-stat-v">Automated</span></div>
+          <div class="work-stat"><span class="work-stat-k">Deliverable</span><span class="work-stat-v">Rate study</span></div>
+          <div class="work-stat"><span class="work-stat-k">Status</span><span class="work-stat-v">In production</span></div>
+        </div>
+        <div class="work-footer">
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Claude</span><span class="tag">Excel</span></div>
+          <div class="work-actions"><span class="work-open">Read →</span></div>
+        </div>
+      </button>
+
+      <button class="work-card" data-open="bundesliga">
+        <div class="work-number">№ 03</div>
+        <div class="eyebrow">2020 — 2021 · Senior thesis · Kalamazoo</div>
+        <h3 class="work-title">Poisson and Gamma GLMs that beat the betting markets.</h3>
+        <p class="work-summary">Predicted final league tables from half-season data. A Poisson model on goals and a Gamma model on expected goals both matched or beat market predictions across the tested seasons.</p>
+        <div class="work-stats">
+          <div class="work-stat"><span class="work-stat-k">Pearson (points)</span><span class="work-stat-v">0.89</span></div>
+          <div class="work-stat"><span class="work-stat-k">Spearman (rank)</span><span class="work-stat-v">0.88</span></div>
+          <div class="work-stat"><span class="work-stat-k">Seasons</span><span class="work-stat-v">11</span></div>
+        </div>
+        <div class="work-footer">
+          <div class="tags"><span class="tag">R</span><span class="tag">GLM</span><span class="tag">Poisson</span><span class="tag">Gamma</span></div>
+          <div class="work-actions"><span class="work-open">Read →</span></div>
+        </div>
+      </button>
+
+      <button class="work-card" data-open="holidu-pipelines">
+        <div class="work-number">№ 04</div>
+        <div class="eyebrow">2022 — 2024 · Holidu · Munich</div>
+        <h3 class="work-title">Rebuilding the data spine behind the bidding team.</h3>
+        <p class="work-summary">Worked with the engineering team to rebuild the data spine behind bidding: dynamic market groupings, historical tracking tables, automated Slack alerts, and formalized troubleshooting — plus interlinked Looker dashboards and a LOESS model that together cut weekly manual work sharply.</p>
+        <div class="work-stats">
+          <div class="work-stat"><span class="work-stat-k">Manual work</span><span class="work-stat-v">Halved</span></div>
+          <div class="work-stat"><span class="work-stat-k">Markets</span><span class="work-stat-v">24 monitored</span></div>
+          <div class="work-stat"><span class="work-stat-k">Dashboards</span><span class="work-stat-v">Self-serve</span></div>
+        </div>
+        <div class="work-footer">
+          <div class="tags"><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">Looker</span><span class="tag">AWS</span></div>
+          <div class="work-actions"><span class="work-open">Read →</span></div>
+        </div>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2>A practitioner, not a platform.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-col">
+        <p class="about-lede">
+          I work with teams that need their numbers to make <em>decisions</em>, not decks.
+        </p>
+        <p class="dropcap">
+          My background is in statistics and econometrics, with enough systems engineering to
+          ship a model as software the team will actually use. I pick methods for the question,
+          not the résumé: plenty of GLMs, distribution fitting and bootstrap when uncertainty
+          matters, time-series and tree-based models when the data calls for them.
+        </p>
+        <p>
+          I've worked where the gap between a good forecast and real money spent is short —
+          performance marketing, municipal finance, and forecasting systems I've built and run,
+          some solo and some with a team. I care about models that explain themselves to the
+          person whose decision they're informing, and about turning fragile, manual workflows
+          into automated, repeatable ones.
+        </p>
+        <p>
+          I'm bilingual in English and German, based in Munich, and currently studying toward
+          actuarial certification on the DAV track. I'm looking for a data, analytics, or
+          entry-level actuarial role where statistical rigor and business sense both matter.
+        </p>
+      </div>
+      <aside class="about-side">
+        <figure class="photo-frame">
+          <img src="assets/photos/rope-team.jpg" alt="A rope team on the Piz Buin glacier, Vorarlberg, shot on 35mm film" loading="lazy"/>
+          <figcaption class="photo-caption">Piz Buin · Vorarlberg · 2025</figcaption>
+        </figure>
+        <div class="about-block">
+          <h4>Focus</h4>
+          <ul>
+            <li><span class="k">Forecasting</span><span class="v">demand · price</span></li>
+            <li><span class="k">Marketing mix</span><span class="v">attribution · bid</span></li>
+            <li><span class="k">Experimentation</span><span class="v">design · readout</span></li>
+            <li><span class="k">Pipelines</span><span class="v">Airflow · dbt</span></li>
+          </ul>
+        </div>
+        <div class="about-block">
+          <h4>Stack</h4>
+          <ul class="mono">
+            <li><span class="k">R</span><span class="v">tidyverse · GLMs</span></li>
+            <li><span class="k">Python</span><span class="v">XGBoost · MCP</span></li>
+            <li><span class="k">SQL</span><span class="v">dbt · Redshift</span></li>
+            <li><span class="k">BI</span><span class="v">Looker · Power BI</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ CV ============ -->
+  <section id="cv" class="section">
+    <div class="section-head">
+      <div class="eyebrow">CV</div>
+      <h2>Experience &amp; education.</h2>
+    </div>
+
+    <div class="cv-block">
+      <div class="cv-head">Experience</div>
+      <div class="cv-row">
+        <div class="cv-year">2025 —</div>
+        <div class="cv-body">
+          <div class="cv-role">Analyst · Associate Consultant</div>
+          <div class="cv-org">Municipal Analytics · Remote (Ann Arbor, MI)</div>
+          <div class="cv-note">Support strategic financial-planning engagements across multiple municipal clients — water/sewer rate studies, multi-year forecasts, and fiscal-impact analyses. Built and deployed a Python rate-optimization engine, with an AI layer that standardizes each client's billing data and flags quality issues before the model runs — turning a manual spreadsheet process into a repeatable one.</div>
+        </div>
+      </div>
+      <div class="cv-row">
+        <div class="cv-year">2021 — 2025</div>
+        <div class="cv-body">
+          <div class="cv-role">Performance Marketing Manager → Bidding Model Lead</div>
+          <div class="cv-org">Holidu GmbH · Munich</div>
+          <div class="cv-note">Primary owner of a bidding model steering up to 80% of company revenue and ~€100k/day in ad spend. Doubled model-driven profit from €2.4M to over €5M year-over-year, restructured the Airflow/dbt/AWS pipelines behind it, and built the R analyses, A/B tests, and Looker dashboards that kept it honest.</div>
+        </div>
+      </div>
+      <div class="cv-row">
+        <div class="cv-year">2020 — 2021</div>
+        <div class="cv-body">
+          <div class="cv-role">Research · Senior thesis</div>
+          <div class="cv-org">Kalamazoo College · Mathematics</div>
+          <div class="cv-note">Poisson &amp; Gamma GLMs for Bundesliga outcomes; models matched or beat betting-market predictions in the tested seasons.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <div class="cv-head">Education</div>
+      <div class="cv-row">
+        <div class="cv-year">2021</div>
+        <div class="cv-body">
+          <div class="cv-role">BA, Business Administration</div>
+          <div class="cv-org">Kalamazoo College, USA — concentrations in Statistics &amp; Mathematics. Dean's List. Senior thesis written in R.</div>
+        </div>
+      </div>
+      <div class="cv-row">
+        <div class="cv-year">2019 — 2020</div>
+        <div class="cv-body">
+          <div class="cv-role">Exchange · Study abroad</div>
+          <div class="cv-org">FAU Erlangen–Nürnberg, Germany — statistics &amp; business coursework in German (contributed to C1 proficiency).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <div class="cv-head">Currently</div>
+      <div class="cv-row">
+        <div class="cv-year">2025 —</div>
+        <div class="cv-body">
+          <div class="cv-role">Actuarial certification · DAV track</div>
+          <div class="cv-org">Self-studying toward DAV exams alongside data-analytics work — pricing, reserving, and the statistics underneath them.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contact" class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-wordmark">Isaac Kaczor<span class="dot">.</span></div>
+        <p>Statistics, econometrics, and the systems that put them to work. Based in Munich and open to data, analytics, and entry-level actuarial roles.</p>
+        <div class="footer-line">© <span id="year">2026</span> · Built in R, SQL, and very few colors.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:isaac.kaczor@gmail.com">isaac.kaczor@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/Kaczor594" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ WORK DETAIL SHEETS (toggled by JS) ============ -->
+  <div class="sheet-scrim" data-sheet="holidu-bid" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="Bidding model case study">
+      <div class="sheet-head">
+        <div class="eyebrow">2021 — 2025 · Holidu · Munich</div>
+        <button class="sheet-close" data-close>Close · Esc</button>
+      </div>
+      <h2 class="sheet-title">Bidding model steering up to 80% of company revenue.</h2>
+      <p class="sheet-lede">Owned the Google Ads bidding system at a 750-person company and rebuilt its logic around marginal-profit analysis — doubling model-driven profit while keeping it legible to the marketing team.</p>
+      <div class="sheet-grid">
+        <div>
+          <h4>Method</h4>
+          <p>The model itself was a hierarchical averaging system in SQL. I ran independent statistical analyses in R — per-product and per-region Gamma and Gaussian GLMs, AIC-based distribution fitting, and bootstrap uncertainty — to find inefficiencies and feed the results back as multiplicative correction factors and adjustable inputs. Every non-bug-fix change was A/B tested before rollout.</p>
+        </div>
+        <div>
+          <h4>Outcome</h4>
+          <p>Doubled model-driven profit from <b>€2.4M (2023)</b> to <b>over €5M (2024)</b>, with €25M+ in revenue routed through Google Ads. The performance-marketing team beat company revenue and profit targets 1–3 months early in both 2023 and 2024.</p>
+        </div>
+        <div>
+          <h4>Stack</h4>
+          <p class="mono">R · SQL · dbt · Airflow · AWS (Redshift, Athena) · Looker</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>Primary owner for 2+ years — one of three people with comprehensive understanding of the model. ~€100k/day in ad spend under management across European markets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sheet-scrim" data-sheet="municipal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="Municipal Analytics case study">
+      <div class="sheet-head">
+        <div class="eyebrow">2025 — · Municipal Analytics · Remote</div>
+        <button class="sheet-close" data-close>Close · Esc</button>
+      </div>
+      <h2 class="sheet-title">Standardizing messy utility data, then optimizing the rates.</h2>
+      <p class="sheet-lede">Most of the work in a utility-rate study isn't the math — it's getting every client's billing data into a shape a model can trust. This tool automates that, then optimizes the rates.</p>
+      <div class="sheet-grid">
+        <div>
+          <h4>Method</h4>
+          <p>At its core it is a rate-calculation engine for water and sewer utilities — cost allocation, reserve targets, bond and capital modeling, meter-ratio scaling. Around it, an AI layer standardizes each client's raw billing exports to the engine's format, adapting to that community's structure and preferences, proofing for missing or inconsistent data, and flagging quality issues (e.g. township vs. village rate-code splits) before they reach the model.</p>
+        </div>
+        <div>
+          <h4>Outcome</h4>
+          <p>A fragile, manual spreadsheet process became repeatable and fast: the engine optimizes rates against each community's financial constraints and returns a clean, standardized study — bill-impact tables, fund-balance projections, and capital plans — with every figure traceable to its inputs. In production for live client engagements.</p>
+        </div>
+        <div>
+          <h4>Stack</h4>
+          <p class="mono">Python · FastAPI · Claude (tool-use) · Google Drive API · DuckDB · openpyxl</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>Designed and built it end to end — the rate engine, the data-standardization tooling, and the workflows behind them — and deployed it for live client use.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sheet-scrim" data-sheet="bundesliga" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="Bundesliga thesis case study">
+      <div class="sheet-head">
+        <div class="eyebrow">2020 — 2021 · Senior thesis · Kalamazoo</div>
+        <button class="sheet-close" data-close>Close · Esc</button>
+      </div>
+      <h2 class="sheet-title">Poisson and Gamma GLMs that beat the betting markets.</h2>
+      <p class="sheet-lede">Predicting where eighteen teams finish, from only half a season of data — and checking the answer against the market.</p>
+
+      <div class="sheet-grid">
+        <div>
+          <h4>Method</h4>
+          <p>Poisson GLM fitted on first-half goals scored and conceded per team, then used to simulate the remaining matches 10,000 times. A Gamma GLM variant used expected goals (xG) in place of goals.</p>
+        </div>
+        <div>
+          <h4>Outcome</h4>
+          <p>Pearson correlation between simulated and actual final points averaged <b>0.89</b>; Spearman's ρ on final rankings was <b>0.88</b>. Both models matched or beat betting-market predictions across the tested seasons.</p>
+        </div>
+        <div>
+          <h4>Stack</h4>
+          <p class="mono">R · dplyr · ggplot2 · glm(family = poisson / Gamma)</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>Sole author. Supervised by Dr. Eric Nordmoe, Kalamazoo College Mathematics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sheet-scrim" data-sheet="holidu-pipelines" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-label="Data pipeline rebuild case study">
+      <div class="sheet-head">
+        <div class="eyebrow">2022 — 2024 · Holidu · Munich</div>
+        <button class="sheet-close" data-close>Close · Esc</button>
+      </div>
+      <h2 class="sheet-title">Rebuilding the data spine behind the bidding team.</h2>
+      <p class="sheet-lede">When the team halved from twelve to six, the manual market-by-market work had to become automated, observable, and fast.</p>
+      <div class="sheet-grid">
+        <div>
+          <h4>Method</h4>
+          <p>Partnered with the engineering team to audit and restructure the Airflow/dbt pipelines feeding the bidding model: fixed ETL and dbt bugs, reshaped DAG flows to refresh faster, and added historical tracking tables. Introduced dynamic market groupings, automated Slack alerts for anomalies, and a formalized troubleshooting process so problems were caught and resolved consistently.</p>
+        </div>
+        <div>
+          <h4>Outcome</h4>
+          <p>Together these changes — plus a set of interlinked, self-serve Looker dashboards and a LOESS adjustment model — sharply cut the weekly manual work that had ballooned when the team halved from twelve to six. Integrating a new Google Ads channel also resolved <b>18+ months</b> of legacy setup issues.</p>
+        </div>
+        <div>
+          <h4>Stack</h4>
+          <p class="mono">Airflow · dbt · AWS · Looker · R</p>
+        </div>
+        <div>
+          <h4>Role</h4>
+          <p>Collaborated with the engineering team to build and maintain the data spine, alongside owning the core bidding work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72">
+  <rect width="72" height="72" rx="12" fill="#F8F5EE"/>
+  <text x="14" y="49" font-family="Georgia, 'Fraunces', serif" font-size="40" fill="#15140F">i<tspan font-style="italic" dx="1">k</tspan></text>
+  <line x1="14" y1="56" x2="33" y2="56" stroke="#3E5A32" stroke-width="2.6" stroke-linecap="square"/>
+</svg>
