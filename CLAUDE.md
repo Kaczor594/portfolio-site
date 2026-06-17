@@ -13,9 +13,15 @@ dependencies, no framework.** Live at https://isaac-kaczor.vercel.app.
 
 ## Tooling
 - No package manager / build. View locally: `python3 -m http.server 8088`.
-- Deploy: `vercel --prod` from the repo root (Vercel project `portfolio`, team
-  `kaczor594s-projects`; static, preset Other, output dir `.`). Git push does NOT
-  auto-deploy — redeploy via CLI.
+- **Deploy: `./deploy.sh`** from the repo root. It runs `vercel --prod` (Vercel
+  project `portfolio`, team `kaczor594s-projects`; static, preset Other, output
+  dir `.`) **then re-aliases `isaac-kaczor.vercel.app` to the new deployment.**
+  ⚠️ Do NOT deploy with a bare `vercel --prod`: the live domain
+  `isaac-kaczor.vercel.app` is a manual `*.vercel.app` alias, not the project's
+  auto-following production domain, so `--prod` alone leaves it on the OLD build.
+  Git push does NOT auto-deploy. (Fix the root cause someday by attaching
+  `isaac-kaczor.vercel.app` as a Production domain in the Vercel dashboard, which
+  would let plain `--prod` auto-alias it and retire this script.)
 - Functional checks: headless Chrome at
   `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
   (+ `puppeteer-core` in a throwaway dir if scripting clicks).

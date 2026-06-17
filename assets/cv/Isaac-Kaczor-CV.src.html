@@ -1,0 +1,139 @@
+<!doctype html>
+<!-- Source for Isaac-Kaczor-CV.pdf. Content from ~/job-application-pipeline/profile.json.
+     Regenerate: see assets/cv/README.md. Replace the PDF freely (e.g. a pipeline résumé export). -->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --ink:#1a1a18; --soft:#55524c; --faint:#8a857d; --line:#d9d5cc;
+    --accent:#9a4a2f; --paper:#fdfcf9;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:13mm 15mm; }
+  html,body{ margin:0; padding:0; background:var(--paper); color:var(--ink); }
+  body{ font-family:'Geist', system-ui, sans-serif; font-size:9.4px; line-height:1.5; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .name{ font-family:'Fraunces', Georgia, serif; font-weight:500; font-size:25px; letter-spacing:-0.01em; margin:0; }
+  .tagline{ font-family:'Fraunces', Georgia, serif; font-style:italic; color:var(--soft); font-size:11px; margin:2px 0 0; }
+  .contact{ margin-top:7px; color:var(--soft); font-size:8.7px; display:flex; flex-wrap:wrap; gap:4px 12px; }
+  .contact a{ color:var(--accent); text-decoration:none; }
+  .rule{ height:1px; background:var(--line); border:0; margin:11px 0 12px; }
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:0 26px; }
+  h2.sec{ font-family:'Geist', sans-serif; font-weight:600; text-transform:uppercase; letter-spacing:0.12em; font-size:8.3px; color:var(--accent); margin:0 0 7px; }
+  .block{ margin-bottom:13px; }
+  .role{ font-weight:600; font-size:10px; margin:0; }
+  .org{ color:var(--soft); font-size:9px; margin:1px 0 0; display:flex; justify-content:space-between; gap:8px; }
+  .org .when{ color:var(--faint); white-space:nowrap; font-variant-numeric:tabular-nums; }
+  ul{ margin:5px 0 0; padding-left:13px; }
+  li{ margin:0 0 2.5px; }
+  .lede{ font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:10.5px; color:var(--soft); margin:0 0 12px; line-height:1.45; }
+  .kv{ margin:0; }
+  .kv div{ display:flex; gap:8px; margin-bottom:3px; }
+  .kv .k{ width:64px; color:var(--faint); flex:none; }
+  .kv .v{ color:var(--ink); }
+  .mono{ font-feature-settings:"tnum"; }
+  b{ font-weight:600; }
+</style>
+</head>
+<body>
+  <header>
+    <h1 class="name">Isaac Kaczor</h1>
+    <p class="tagline">Statistics, econometrics &amp; the systems that put them to work.</p>
+    <div class="contact">
+      <span>Munich, Germany</span>
+      <a href="mailto:isaac.kaczor@gmail.com">isaac.kaczor@gmail.com</a>
+      <a href="https://isaac-kaczor.vercel.app">isaac-kaczor.vercel.app</a>
+      <a href="https://github.com/Kaczor594">github.com/Kaczor594</a>
+      <span>English (native) · German (C1)</span>
+    </div>
+  </header>
+  <hr class="rule"/>
+
+  <p class="lede">I build statistical tools teams actually use to make decisions — forecasting, bidding,
+  and measurement systems that explain themselves to the person whose budget they steer.</p>
+
+  <div class="grid">
+    <div class="col">
+
+      <div class="block">
+        <h2 class="sec">Experience</h2>
+        <p class="role">Analyst · Associate Consultant</p>
+        <p class="org"><span>Municipal Analytics · Remote</span><span class="when">2025 —</span></p>
+        <ul>
+          <li>Client-facing consultant advising municipal water, sewer &amp; energy utilities on 20-year financial forecasts, rate studies, and fiscal-impact analyses — leading client meetings and public board presentations.</li>
+          <li>Built an R/Python/SQL analytics workspace replacing ad-hoc Excel; standardized SQL ETL for reuse across client engagements.</li>
+          <li>Architected an AI data-access layer (Cloudflare Workers + Claude via MCP) so staff query financial data in natural language.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <p class="role">Performance Marketing Manager → Bidding Model Lead</p>
+        <p class="org"><span>Holidu GmbH · Munich</span><span class="when">2021 — 2025</span></p>
+        <ul>
+          <li>Owned the Google Ads bidding model steering up to <b>80% of company revenue</b> and ~<b>€100k/day</b> in ad spend across European markets — one of three people with full understanding of the system.</li>
+          <li>Doubled model-driven profit year over year, <b>€2.4M → €5M+</b>, on <b>€25M+</b> of revenue; team beat company-wide KPIs 1–3 months early.</li>
+          <li>Rebuilt the model's logic around marginal-profit analysis using independent GLM/regression studies, applied as dynamic correction factors.</li>
+          <li>Owned the data pipeline behind it (dbt, Airflow, AWS Redshift/Athena); A/B-tested every non-trivial change; built a LOESS tool that halved weekly manual time.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <p class="role">Research · Senior thesis</p>
+        <p class="org"><span>Kalamazoo College · Mathematics</span><span class="when">2020 — 2021</span></p>
+        <ul>
+          <li>Poisson &amp; Gamma GLMs for Bundesliga outcomes in R; models matched or beat betting-market predictions across the tested seasons (Pearson 0.89, Spearman 0.88).</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="col">
+
+      <div class="block">
+        <h2 class="sec">Education</h2>
+        <p class="role">BA, Business Administration</p>
+        <p class="org"><span>Kalamazoo College, USA</span><span class="when">2021</span></p>
+        <ul>
+          <li>Concentrations in Statistics &amp; Mathematics (econometrics, mathematical statistics). Dean's List. Senior thesis written in R.</li>
+        </ul>
+        <p class="role" style="margin-top:8px;">Exchange · Study abroad</p>
+        <p class="org"><span>FAU Erlangen–Nürnberg, Germany</span><span class="when">2019 — 2020</span></p>
+        <ul>
+          <li>Statistics &amp; business coursework in German — contributed to C1 proficiency.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Skills</h2>
+        <div class="kv">
+          <div><span class="k">Languages</span><span class="v">R · SQL · Python</span></div>
+          <div><span class="k">Statistics</span><span class="v">GLMs · forecasting · A/B testing · distribution fitting · bootstrap / Monte Carlo</span></div>
+          <div><span class="k">ML</span><span class="v">XGBoost · random forests · calibration · SHAP</span></div>
+          <div><span class="k">Data</span><span class="v">Airflow · dbt · AWS (Redshift, Athena) · ETL pipelines</span></div>
+          <div><span class="k">BI</span><span class="v">Looker · Power BI · Streamlit</span></div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Currently</h2>
+        <p class="role">Actuarial certification · DAV track</p>
+        <p class="org"><span>Self-study alongside analytics work</span><span class="when">2025 —</span></p>
+        <ul>
+          <li>Pricing, reserving, and the statistics underneath them.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2 class="sec">Live projects</h2>
+        <ul style="padding-left:13px;">
+          <li>World Cup 2026 prediction model — player-level ratings, 10,000-run Monte Carlo, live dashboard, evaluated vs. market consensus.</li>
+          <li>March Madness model — XGBoost over 16,691 NCAA games with walk-forward evaluation, calibration, and SHAP.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

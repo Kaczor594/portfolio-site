@@ -63,7 +63,7 @@
   });
 
   /* ---------- Scrollspy: highlight active nav link ---------- */
-  var spy = ["hero", "live", "work", "about", "cv", "contact"];
+  var spy = ["hero", "work", "live", "about", "cv", "contact"];
   var navLinks = {};
   document.querySelectorAll(".nav-link[data-nav]").forEach(function (a) {
     navLinks[a.getAttribute("data-nav")] = a;

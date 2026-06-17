@@ -89,9 +89,16 @@ body {
   overflow: hidden;
   border-bottom: 1px solid var(--line-1);
 }
+.cv-download { margin-top: 16px; }
+.cv-download .btn { font-family: var(--font-mono); }
+
 .hero-photo {
   position: absolute; inset: 0;
-  background-image: url('assets/photos/hero-dolomites.jpeg');
+  background-image: url('assets/photos/hero-dolomites.jpeg'); /* fallback */
+  background-image: image-set(
+    url('assets/photos/hero-dolomites.webp') type('image/webp'),
+    url('assets/photos/hero-dolomites.jpeg') type('image/jpeg')
+  );
   background-size: cover; background-position: center 55%;
   opacity: 0.22;
   filter: saturate(0.78) contrast(0.95);
