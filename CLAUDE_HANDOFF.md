@@ -13,12 +13,18 @@ Claude Design handoff; rebuilt here as a real, deployable site. **Live at
 https://isaac-kaczor.vercel.app.**
 
 ## Current State
-Shipped and live. Everything works:
+Shipped and live (last deploy 2026-06-17). Everything works:
 - Sections: topbar · hero · selected work (case-study modals) · **Live projects**
   band · about · CV · footer. (Professional work leads; sports forecasting follows.)
+- Hero shows a target-role band ("Open to data, analytics & actuarial roles") and a
+  "See my work" primary CTA → `#work`.
+- CV section has a **Download CV (PDF)** button → `assets/cv/Isaac-Kaczor-CV.pdf`
+  (a generated one-page CV; swap the file freely — see `assets/cv/README.md`).
 - Behaviors (vanilla JS): dissolving topbar, scrollspy, theme toggle (system
   default + `localStorage` override), work-detail modals (open on click, close on
   Esc/backdrop, focus trap), reduced-motion guard, footer year.
+- SEO/perf: `robots.txt` + `sitemap.xml` live; hero served as WebP (~122K) via CSS
+  `image-set()` with a ~263K JPEG fallback.
 - Verified: no horizontal overflow ≥360px, dark mode (system + toggle), modals,
   all assets 200, OG/canonical absolute URLs resolve. Public (Deployment
   Protection disabled).
@@ -89,6 +95,22 @@ inline in `index.html` (no CMS). Source of truth for the *copy* is
   public).
 
 ## Recent Changes
+### Session 2026-06-17 (site pass — review fixes)
+Acting on a multi-agent employer review of the live site. Two commits (`6e04283`,
+`2a68ca1`), **not yet pushed to GitHub**; deployed to prod via `./deploy.sh`.
+- Added a **Download CV (PDF)** button + `assets/cv/` (generated one-page PDF,
+  `*.src.html` layout source rendered with headless Chrome, `README.md` regen steps).
+- **Reordered** so Selected work (Holidu, Municipal) precedes the sports Live
+  projects; updated the nav, the `app.js` scrollspy `spy` array, and the hero CTA.
+- Added a target-role band above the fold (kept as a band, not one title, since the
+  roles applied to vary).
+- SEO/perf: added `robots.txt` + `sitemap.xml`; optimized the hero (645K → 122K
+  WebP via `image-set()`, 263K JPEG fallback).
+- Added **`deploy.sh`** (deploy + re-alias the manual `isaac-kaczor.vercel.app`
+  alias) after discovering a bare `vercel --prod` left the canonical domain on the
+  old build. Fixed stale `vercel --prod` deploy docs across CLAUDE.md / this file /
+  README. Ran `/clean` (report at `.claude/cleanup_report.md`, all items resolved).
+
 ### Session 2026-06-17 (build → ship)
 - Built the site from the Claude Design handoff bundle; rebuilt the React-CDN
   prototype as static HTML/CSS/JS. Added a "Live projects" band (World Cup 2026

@@ -36,8 +36,10 @@ dependencies, no framework.** Live at https://isaac-kaczor.vercel.app.
   used in wc26-dashboard and municipal-analytics-app).
 - `app.js` — vanilla behaviors: topbar dissolve, scrollspy, theme toggle
   (system + `localStorage`), modals (Esc/backdrop + focus trap), footer year.
-- `assets/` — `photos/hero-dolomites.jpeg`, `photos/rope-team.jpg`,
-  `logo/monogram.svg` (favicon).
+- `assets/` — `photos/hero-dolomites.jpeg` + `.webp` (hero bg via CSS `image-set()`),
+  `photos/rope-team.jpg`, `logo/monogram.svg` (favicon), `cv/Isaac-Kaczor-CV.pdf`
+  (Download-CV target; `*.src.html` + `README.md` regen it via headless Chrome).
+- `deploy.sh` — deploy + canonical re-alias (see Tooling). `robots.txt` / `sitemap.xml` — SEO.
 
 ## Content rules
 - Copy is inline in `index.html` (no CMS). Source of truth is
