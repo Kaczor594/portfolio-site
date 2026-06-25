@@ -3,3 +3,8 @@
 node_modules
 
 .claude/
+
+# Internal dev notes
+CLAUDE.md
+CLAUDE_HANDOFF.md
+.claude/
